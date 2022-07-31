@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_final_6319c10022/views/%20sau_ui.dart';
+import 'package:flutter_app_final_6319c10022/views/sau_ui.dart';
 
 class SauSplashscreenUI extends StatefulWidget {
   const SauSplashscreenUI({Key? key}) : super(key: key);
