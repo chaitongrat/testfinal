@@ -43,10 +43,9 @@ class _EnUIState extends State<EnUI> {
               height: 10.0,
             ),
             Image(
-              image: AssetImage(
-                'assets/images/en.jpg',
-              ),
-              width: 270,
+              image: AssetImage('assets/images/en.jpg'),
+              fit: BoxFit.fitWidth,
+              //width: 270,
             ),
             SizedBox(
               height: 10.0,
