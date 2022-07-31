@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_final_6319c10022/views/art_sci_ui.dart';
+import 'package:flutter_app_final_6319c10022/views/bs_ui.dart';
+import 'package:flutter_app_final_6319c10022/views/en_ui.dart';
+import 'package:flutter_app_final_6319c10022/views/la_ui.dart';
 
 class SauUI extends StatefulWidget {
   const SauUI({Key? key}) : super(key: key);
@@ -154,7 +158,14 @@ class _SauUIState extends State<SauUI> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SauUI(),
+                  ),
+                );
+              },
             ),
             Divider(),
             ListTile(
@@ -165,7 +176,14 @@ class _SauUIState extends State<SauUI> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EnUI(),
+                  ),
+                );
+              },
             ),
             Divider(),
             ListTile(
@@ -176,7 +194,14 @@ class _SauUIState extends State<SauUI> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ArtSciUI(),
+                  ),
+                );
+              },
             ),
             Divider(),
             ListTile(
@@ -187,7 +212,14 @@ class _SauUIState extends State<SauUI> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BsUI(),
+                  ),
+                );
+              },
             ),
             Divider(),
             ListTile(
@@ -198,7 +230,14 @@ class _SauUIState extends State<SauUI> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LaUI(),
+                  ),
+                );
+              },
             ),
             Divider(),
           ],
