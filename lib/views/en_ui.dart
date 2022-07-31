@@ -22,117 +22,121 @@ class _EnUIState extends State<EnUI> {
       appBar: AppBar(
         title: Text(
           'SAU',
+          style:
+              TextStyle(color: Colors.grey[800], fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[400],
+        backgroundColor: Colors.grey[300],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              'FACULTY OF ENGINEERING',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 10.0,
               ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Image(
-              image: AssetImage('assets/images/en.jpg'),
-              fit: BoxFit.fitWidth,
-              //width: 270,
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              'สาขาวิศวกรรมสิ่งแวดล้อม',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'สาขาวิศวกรรมความปลอดภัย',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'สาขาวิศวกรรมคอมพิวเตอร์',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'สาขาวิศวกรรมโยธา',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'สาขาวิศวกรรมไฟฟ้า',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'สาขาวิศวกรรมอุตสาหการ',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'สาขาวิศวกรรมเครื่องกล',
-              style: TextStyle(
-                color: Color.fromARGB(255, 113, 113, 113),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  icon: Image.asset('assets/images/phone-icon.png'),
-                  iconSize: 50,
-                  onPressed: () => setState(
-                    () {
-                      _makePhoneCall('028064500');
-                    },
-                  ),
+              Text(
+                'FACULTY OF ENGINEERING',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
-                IconButton(
-                  icon: Image.asset('assets/images/Globe-icon.png'),
-                  iconSize: 50,
-                  onPressed: () => setState(
-                    () {
-                      _launchInBrowser(toLaunch);
-                    },
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Image(
+                image: AssetImage('assets/images/en.jpg'),
+                fit: BoxFit.fitWidth,
+                //width: 270,
+              ),
+              SizedBox(
+                height: 25.0,
+              ),
+              Text(
+                'สาขาวิศวกรรมสิ่งแวดล้อม',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'สาขาวิศวกรรมความปลอดภัย',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'สาขาวิศวกรรมคอมพิวเตอร์',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'สาขาวิศวกรรมโยธา',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'สาขาวิศวกรรมไฟฟ้า',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'สาขาวิศวกรรมอุตสาหการ',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'สาขาวิศวกรรมเครื่องกล',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 113, 113, 113),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    icon: Image.asset('assets/images/phone-icon.png'),
+                    iconSize: 50,
+                    onPressed: () => setState(
+                      () {
+                        _makePhoneCall('028064500');
+                      },
+                    ),
                   ),
-                )
-              ],
-            ),
-          ],
+                  IconButton(
+                    icon: Image.asset('assets/images/Globe-icon.png'),
+                    iconSize: 50,
+                    onPressed: () => setState(
+                      () {
+                        _launchInBrowser(toLaunch);
+                      },
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
       drawer: Drawer(
