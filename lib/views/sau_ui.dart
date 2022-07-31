@@ -89,37 +89,118 @@ class _SauUIState extends State<SauUI> {
         ),
       ),
       drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+        //backgroundColor: Colors.grey[400],
         child: ListView(
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
+          children: <Widget>[
+            Container(
+              child: new DrawerHeader(
+                child: Container(
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Row(
+                          children: [
+                            Text(
+                              "S",
+                              style: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 23, 0, 139),
+                              ),
+                            ),
+                            Text(
+                              "A",
+                              style: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 23, 0, 139),
+                              ),
+                            ),
+                            Text(
+                              "U",
+                              style: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 255, 230, 0),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          "Southeast Asia University",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
+                    ],
+                  ),
+                  alignment: Alignment.bottomLeft, // <-- ALIGNMENT
+                  height: 10,
+                ),
+                decoration: BoxDecoration(color: Colors.grey),
               ),
-              child: Text('Drawer Header'),
+              height: 150, // <-- HEIGHT
             ),
             ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
+              title: Text(
+                "SAU",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onTap: () {},
             ),
+            Divider(),
             ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
+              title: Text(
+                "วิศวกรรมศาสตร์",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onTap: () {},
             ),
+            Divider(),
+            ListTile(
+              title: Text(
+                "วิศวกรรมศาสตร์และวิทยาศาสตร์",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onTap: () {},
+            ),
+            Divider(),
+            ListTile(
+              title: Text(
+                "บริหารธุรกิจ",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onTap: () {},
+            ),
+            Divider(),
+            ListTile(
+              title: Text(
+                "นิติศาสตร์",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              onTap: () {},
+            ),
+            Divider(),
           ],
         ),
       ),
