@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_final_6319c10022/views/sau_ui.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'art_sci_ui.dart';
 import 'bs_ui.dart';
@@ -13,6 +14,8 @@ class EnUI extends StatefulWidget {
 }
 
 class _EnUIState extends State<EnUI> {
+  final Uri toLaunch = Uri(scheme: 'https', host: 'www.sau.ac.th', path: '');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +108,7 @@ class _EnUIState extends State<EnUI> {
               ),
             ),
             SizedBox(
-              height: 25.0,
+              height: 10.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +121,11 @@ class _EnUIState extends State<EnUI> {
                 IconButton(
                   icon: Image.asset('assets/images/Globe-icon.png'),
                   iconSize: 50,
-                  onPressed: () {},
+                  onPressed: () => setState(
+                    () {
+                      _launchInBrowser(toLaunch);
+                    },
+                  ),
                 )
               ],
             ),
@@ -277,5 +284,14 @@ class _EnUIState extends State<EnUI> {
         ),
       ),
     );
+  }
+
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw 'Could not launch $url';
+    }
   }
 }
