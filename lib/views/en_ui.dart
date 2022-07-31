@@ -116,7 +116,11 @@ class _EnUIState extends State<EnUI> {
                 IconButton(
                   icon: Image.asset('assets/images/phone-icon.png'),
                   iconSize: 50,
-                  onPressed: () {},
+                  onPressed: () => setState(
+                    () {
+                      _makePhoneCall('028064500');
+                    },
+                  ),
                 ),
                 IconButton(
                   icon: Image.asset('assets/images/Globe-icon.png'),
@@ -293,5 +297,13 @@ class _EnUIState extends State<EnUI> {
     )) {
       throw 'Could not launch $url';
     }
+  }
+
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    await launchUrl(launchUri);
   }
 }
